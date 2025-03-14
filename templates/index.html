@@ -7,14 +7,41 @@
 {% block body %}
     <div class="container">
         <div class="section">
-            <h1>Welcome to My Website</h1>
+            <h1>Hello my name is Parth</h1>
             <p>Explore to learn more about me!</p>
         </div>
 
         <div class="section" id="bio">
             <h2>Bio</h2>
-            <p>Hi, I'm Parth! I'm passionate about Computer Science. Welcome to my personal space on the web.</p>
+            <p> NAME : Parth Jain</p>
+            <p> AGE : 19</p>
+            <p> LOCATION : Cupertino</p>
         </div>
+
+        <div class="section" id="education">
+            <h2>Education</h2>
+            <p>Currently pursuing a Bachelor's degree in Computer Science at UCMerced.</p>
+
+        </div>
+        <div class="section" id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>HTML & CSS</li>
+            </ul>
+        </div>
+        <div class="section" id="experience">
+            <h2>Experience</h2>
+            <p>Intern at XYZ Company, where I worked on web development and data analysis projects.</p>
+        </div>
+
+        <div class="section" id="interests">
+            <h2>Interests</h2>
+            <p>I enjoy coding, and exploring new technologies.</p>
+        </div>
+
+        
 
         <div class="section" id="projects">
             <h2>Projects</h2>
@@ -34,6 +61,7 @@
             <h2>Contact</h2>
             <p>Email: <a href="{{ url_for('contact') }}">parthgmjain@gmail.com</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/parth-jain05/" target="_blank">My LinkedIn</a></p>
+            <p>GitHub: <a href="https://github.com/parthgmjain" target="_blank">My GitHub</a></p>
         </div>
     </div>
 {% endblock %}

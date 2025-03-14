@@ -1,9 +1,39 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<h1>Home</h1>
+    <title>Home</title>
 {% endblock %}
 
 {% block body %}
-initial text
+    <div class="container">
+        <div class="section">
+            <h1>Welcome to My Website</h1>
+            <p>Explore to learn more about me!</p>
+        </div>
+
+        <div class="section" id="bio">
+            <h2>Bio</h2>
+            <p>Hi, I'm Parth! I'm passionate about Computer Science. Welcome to my personal space on the web.</p>
+        </div>
+
+        <div class="section" id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Project 1:</strong> Recall Royale</li>
+                <li><strong>Project 2:</strong> Credit Compass</li>
+                <li><strong>Project 3:</strong> Personal Website</li>
+            </ul>
+        </div>
+
+        <div class="section" id="information">
+            <h2>Information</h2>
+            <p>Here you can find updates and insights about my work and interests.</p>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="{{ url_for('contact') }}">parthgmjain@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/parth-jain05/" target="_blank">My LinkedIn</a></p>
+        </div>
+    </div>
 {% endblock %}

@@ -5,11 +5,19 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container">
-        <div class="section">
-            <h1>Hello my name is Parth</h1>
-            <p>Explore to learn more about me!</p>
+<div class="container">
+    <div class="section">
+        <div class="content">
+            <img src="{{ url_for('static', filename='images/nature.jpg') }}" alt="Nature" class="profile-image" width="300" height="200">
+            <div class="text">
+                <h1>Hello my name is Parth</h1>
+                <p>Welcome to my personal website!</p>
+                <p>Explore to learn more about me!</p>
+            </div>
         </div>
+    </div>
+</div>
+
 
         <div class="section" id="bio">
             <h2>Bio</h2>

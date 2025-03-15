@@ -279,6 +279,57 @@
     margin-right: 10px; /* Space between icon and text */
     color: #333333; /* Match the text color */
 }
+/* Skills Section Background */
+#skills {
+    background-color: #F0EEA; /* Pastel blue background */
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center; /* Center-align text */
+}
+
+/* Skills Container */
+.skills-container {
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Skill Category Headings */
+.skill-category {
+    color: #616162; /* Blue color for category headings */
+    font-size: 1.3em;
+    margin-top: 20px; /* Space above the heading */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+/* Skill Items Container */
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between skill items */
+    justify-content: center; /* Center skill items */
+}
+
+/* Skill Item Styling */
+.skill-item {
+    background-color: #FFD1DC; /* Pastel pink */
+    color: #333; /* Dark grey text */
+    padding: 10px 20px;
+    border-radius: 25px; /* Rounded corners */
+    font-size: 1em;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Start invisible */
+    transform: translateX(-100%); /* Start off-screen to the left */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animation for Skill Items */
+.skill-item.in-view {
+    opacity: 1; /* Fade in */
+    transform: translateX(0); /* Move to original position */
+}
+
 /* Styling for each section */
 .section {
     background-color: white;

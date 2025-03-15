@@ -5,46 +5,113 @@
     box-sizing: border-box;
 }
 
+/* Hero Section - Full Screen */
+.hero-section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    background-color: #f9f9f9; /* Optional: Add a background color */
+}
+
 /* Flexbox layout for content */
 .content {
-    display: flex; /* Align items side by side */
-    align-items: center; /* Vertically center the image and text */
-    justify-content: space-between; /* Space between image and text */
-    width: 100%; /* Ensure content takes up the full width of the section */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /* Adjust width as needed */
+    max-width: 1200px; /* Optional: Limit maximum width */
 }
 
 /* Image styling */
 .profile-image {
-    width: 50%; /* Image will take up half of the section width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Maintain the aspect ratio and cover the space */
+    width: 50%; /* Image takes up half of the content width */
+    height: auto;
+    object-fit: cover;
 }
 
-/* Text container - align text to the right */
+/* Scroll Button Styling */
+.scroll-button {
+    margin-top: 20px; /* Space above the button */
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #BDBDBD; /* Blue background */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Pill-shaped button with half circles */
+.pill-button {
+    border-radius: 50px; /* Large border-radius for pill shape */
+    padding: 10px 40px; /* Adjust padding for the pill shape */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional: Add half circles on the sides */
+.pill-button::before,
+.pill-button::after {
+    content: '';
+    position: absolute;
+    width: 20px; /* Size of the half circles */
+    height: 20px;
+    background-color: #BDBDBD; /* Same as button background */
+    border-radius: 50%; /* Make them circles */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pill-button::before {
+    left: -10px; /* Position the left half circle */
+}
+
+.pill-button::after {
+    right: -10px; /* Position the right half circle */
+}
+
+/* Hover effect */
+.pill-button:hover {
+    background-color: #757575; /* Darker blue on hover */
+}
+
+.pill-button:hover::before,
+.pill-button:hover::after {
+    background-color: #424242; /* Darker blue on hover */
+}
+/* Text container - center text between image and right border */
 .text {
-    width: 50%; /* Text will take up the other 50% of the section width */
+    width: 50%; /* Text takes up the other half of the content width */
     display: flex;
-    flex-direction: column; /* Stack the heading and paragraphs vertically */
-    justify-content: center; /* Vertically center the text within the div */
-    text-align: right; /* Align text to the right */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Horizontally center text */
+    text-align: center; /* Center-align text */
 }
 
 /* Heading styling */
 .text h1 {
-    margin-bottom: 10px; /* Add space between heading and content */
+    margin-bottom: 10px;
+    font-size: 2.5em; /* Larger font size for emphasis */
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
     .content {
-        flex-direction: column; /* Stack the image, heading, and text on smaller screens */
-        align-items: center; /* Align items at the center of the container */
+        flex-direction: column;
+        align-items: center;
     }
 
     .profile-image, .text {
-        width: 100%; /* Both image and text take full width on small screens */
+        width: 100%;
+    }
+
+    .text h1 {
+        font-size: 2em; /* Adjust font size for smaller screens */
     }
 }
+
 /* Styling for each section */
 .section {
     background-color: white;

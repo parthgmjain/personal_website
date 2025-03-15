@@ -172,6 +172,113 @@
     color: #333; /* Dark color for labels */
     margin-right: 10px; /* Space between label and text */
 }
+
+/* Timeline Container */
+
+#education {
+    background: linear-gradient(135deg, #E0F7FA, #D5F5E3); /* Pastel gradient */
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Vertical Line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #545556; /* Color of the timeline line */
+    transform: translateX(-50%);
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/* Timeline Marker */
+.timeline-marker {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: #545556; /* Color of the marker */
+    border: 2px solid #fff; /* White border around the marker */
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Timeline Content */
+.timeline-content {
+    width: 45%;
+    padding: 10px;
+    background-color: #F5F5F5; /* Light background for content */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Alternate alignment for even items */
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto; /* Push even items to the right */
+}
+
+/* Timeline Date */
+.timeline-date {
+    font-size: 0.9em;
+    color: #757575; /* Grey color for the date */
+    margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px; /* Move the line to the left on small screens */
+    }
+
+    .timeline-marker {
+        left: 20px; /* Move the marker to the left on small screens */
+    }
+
+    .timeline-content {
+        width: calc(100% - 60px); /* Full width on small screens */
+        margin-left: 40px; /* Add space for the marker */
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 40px; /* Align all items to the left on small screens */
+    }
+}
+
+/* Emphasize School Names */
+#education .school-name {
+    font-size: 1.2em; /* Larger font size */
+    font-weight: 600; /* Bold text */
+    color: #333333; /* Blue color for emphasis */
+    margin-top: 10px; /* Space above the school name */
+    margin-bottom: 5px; /* Space below the school name */
+}
+
+/* Optional: Add an Icon Next to School Names */
+#education .school-name::before {
+    content: '\f19c'; /* Font Awesome university icon */
+    font-family: 'Font Awesome 5 Free'; /* Font Awesome font */
+    font-weight: 900; /* Solid style */
+    margin-right: 10px; /* Space between icon and text */
+    color: #333333; /* Match the text color */
+}
 /* Styling for each section */
 .section {
     background-color: white;

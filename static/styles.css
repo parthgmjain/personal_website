@@ -112,6 +112,66 @@
     }
 }
 
+/* Flexbox layout for bio section */
+.bio-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Space between the two columns */
+    margin: 0 20px; /* Add margin from left and right edges */
+}
+
+.bio-details, .bio-info {
+    flex: 1; /* Both sections take equal space */
+    min-width: 250px; /* Minimum width to prevent squeezing */
+}
+
+/* Add a light grey line under each bio detail */
+.bio-details p {
+    margin: 0; /* Remove default margin */
+    padding: 10px 0; /* Add padding for spacing */
+    border-bottom: 1px solid #e0e0e0; /* Light grey border */
+    font-size: 0.9em; /* Slightly smaller text */
+}
+
+/* Remove the border from the last paragraph to avoid an extra line */
+.bio-details p:last-child {
+    border-bottom: none;
+}
+
+/* Style for the info text box */
+.bio-info {
+    display: flex;
+    align-items: center; /* Vertically center the info text */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #f9f9f9; /* Light grey background */
+    font-size: 0.9em; /* Slightly smaller text */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .bio-content {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        margin: 0 10px; /* Reduce margin on smaller screens */
+    }
+
+    .bio-details, .bio-info {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .bio-info {
+        margin-top: 20px; /* Add space between sections on smaller screens */
+    }
+}
+#bio p {
+    font-size: 1.1em; /* Slightly larger text for the entire paragraph */
+    margin-bottom: 10px; /* Space between lines */
+}
+
+#bio strong {
+    font-size: 1.2em; /* Larger font size for labels */
+    color: #333; /* Dark color for labels */
+    margin-right: 10px; /* Space between label and text */
+}
 /* Styling for each section */
 .section {
     background-color: white;

@@ -422,6 +422,8 @@
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
 }
 
 .project-box:hover {
@@ -445,6 +447,21 @@
 .project-box p {
     color: #555; /* Slightly lighter text color */
     font-size: 1em; /* Standard font size for description */
+}
+a {
+    color: #007BFF; /* Default link color */
+    text-decoration: underline; /* Default underline */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
 }
 
 /* Responsive Design */

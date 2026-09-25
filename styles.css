@@ -5,13 +5,86 @@
     box-sizing: border-box;
 }
 
+:root {
+    --accent: #4F46E5;
+    --accent-dark: #3730A3;
+    --accent-light: #EEF2FF;
+    --text: #1f2933;
+    --muted: #6b7280;
+    --bg: #f4f4f7;
+    --surface: #ffffff;
+    --border: #e5e7eb;
+    --radius: 12px;
+    --shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+    --shadow-hover: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    box-shadow: var(--shadow);
+}
+
+.nav-brand {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.95em;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 /* Hero Section - Full Screen */
 .hero-section {
-    height: 100vh; /* Full viewport height */
+    min-height: calc(100vh - 60px);
     display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
-    background-color: #f9f9f9; /* Optional: Add a background color */
+    align-items: center;
+    justify-content: center;
 }
 
 /* Flexbox layout for content */
@@ -19,24 +92,26 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80%; /* Adjust width as needed */
-    max-width: 1200px; /* Optional: Limit maximum width */
+    width: 80%;
+    max-width: 1200px;
 }
 
 /* Image styling */
 .profile-image {
-    width: 50%; /* Image takes up half of the content width */
+    width: 50%;
     height: auto;
     object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 /* Scroll Button Styling */
 .scroll-button {
-    margin-top: 20px; /* Space above the button */
+    margin-top: 20px;
     padding: 10px 20px;
     font-size: 1em;
     color: #fff;
-    background-color: #BDBDBD; /* Blue background */
+    background-color: var(--accent);
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -44,56 +119,54 @@
 
 /* Pill-shaped button with half circles */
 .pill-button {
-    border-radius: 50px; /* Large border-radius for pill shape */
-    padding: 10px 40px; /* Adjust padding for the pill shape */
+    border-radius: 50px;
+    padding: 10px 40px;
     position: relative;
     overflow: hidden;
 }
 
-/* Optional: Add half circles on the sides */
 .pill-button::before,
 .pill-button::after {
     content: '';
     position: absolute;
-    width: 20px; /* Size of the half circles */
+    width: 20px;
     height: 20px;
-    background-color: #BDBDBD; /* Same as button background */
-    border-radius: 50%; /* Make them circles */
+    background-color: var(--accent);
+    border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .pill-button::before {
-    left: -10px; /* Position the left half circle */
+    left: -10px;
 }
 
 .pill-button::after {
-    right: -10px; /* Position the right half circle */
+    right: -10px;
 }
 
-/* Hover effect */
 .pill-button:hover {
-    background-color: #757575; /* Darker blue on hover */
+    background-color: var(--accent-dark);
 }
 
 .pill-button:hover::before,
 .pill-button:hover::after {
-    background-color: #424242; /* Darker blue on hover */
+    background-color: var(--accent-dark);
 }
-/* Text container - center text between image and right border */
+
+/* Text container */
 .text {
-    width: 50%; /* Text takes up the other half of the content width */
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Horizontally center text */
-    text-align: center; /* Center-align text */
+    align-items: center;
+    text-align: center;
 }
 
-/* Heading styling */
 .text h1 {
     margin-bottom: 10px;
-    font-size: 2.5em; /* Larger font size for emphasis */
+    font-size: 2.5em;
 }
 
 /* Responsive design */
@@ -108,112 +181,109 @@
     }
 
     .text h1 {
-        font-size: 2em; /* Adjust font size for smaller screens */
+        font-size: 2em;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 14px 20px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 14px;
     }
 }
 
 /* Flexbox layout for bio section */
 .bio-content {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    gap: 20px; /* Space between the two columns */
-    margin: 0 20px; /* Add margin from left and right edges */
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .bio-details, .bio-info {
-    flex: 1; /* Both sections take equal space */
-    min-width: 250px; /* Minimum width to prevent squeezing */
+    flex: 1;
+    min-width: 250px;
 }
 
-/* Add a light grey line under each bio detail */
 .bio-details p {
-    margin: 0; /* Remove default margin */
-    padding: 10px 0; /* Add padding for spacing */
-    border-bottom: 1px solid #e0e0e0; /* Light grey border */
-    font-size: 0.9em; /* Slightly smaller text */
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9em;
 }
 
-/* Remove the border from the last paragraph to avoid an extra line */
 .bio-details p:last-child {
     border-bottom: none;
 }
 
-/* Style for the info text box */
-/* Bio Info Section */
 .bio-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Push content to top and buttons to bottom */
+    justify-content: space-between;
     padding: 20px;
-    background-color: #f9f9f9; /* Light grey background */
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--accent-light);
+    border-radius: var(--radius);
 }
 
 /* Social Buttons */
 .social-buttons {
     display: flex;
-    gap: 15px; /* Space between buttons */
-    margin-top: 20px; /* Space above the buttons */
-    justify-content: center; /* Center buttons horizontally */
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
 }
 
 .social-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px; /* Button size */
+    width: 50px;
     height: 50px;
-    background-color: #000; /* Black background */
-    border-radius: 50%; /* Circular shape */
-    color: #fff; /* White icon color */
-    text-decoration: none; /* Remove underline */
+    background-color: var(--text);
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .social-button:hover {
-    background-color: #333; /* Darker black on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    background-color: var(--accent);
+    transform: scale(1.1);
 }
 
 .social-button i {
-    font-size: 24px; /* Icon size */
+    font-size: 24px;
 }
 
-/* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .bio-content {
-        flex-direction: column; /* Stack sections vertically on smaller screens */
-        margin: 0 10px; /* Reduce margin on smaller screens */
+        flex-direction: column;
     }
 
     .bio-details, .bio-info {
-        width: 100%; /* Full width on smaller screens */
+        width: 100%;
     }
 
     .bio-info {
-        margin-top: 20px; /* Add space between sections on smaller screens */
+        margin-top: 20px;
     }
 }
+
 #bio p {
-    font-size: 1.1em; /* Slightly larger text for the entire paragraph */
-    margin-bottom: 10px; /* Space between lines */
+    font-size: 1.05em;
+    margin-bottom: 10px;
 }
 
 #bio strong {
-    font-size: 1.2em; /* Larger font size for labels */
-    color: #333; /* Dark color for labels */
-    margin-right: 10px; /* Space between label and text */
+    font-size: 1.1em;
+    color: var(--text);
+    margin-right: 10px;
 }
 
-/* Timeline Container */
-
-#education {
-    background: linear-gradient(135deg, #E0F7FA, #D5F5E3); /* Pastel gradient */
-    padding: 40px 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
+/* Timeline Container (shared by Experience and Education) */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -221,7 +291,6 @@
     padding: 20px 0;
 }
 
-/* Vertical Line */
 .timeline::before {
     content: '';
     position: absolute;
@@ -229,328 +298,307 @@
     left: 50%;
     width: 2px;
     height: 100%;
-    background-color: #545556; /* Color of the timeline line */
+    background-color: var(--border);
     transform: translateX(-50%);
 }
 
-/* Timeline Item */
 .timeline-item {
     position: relative;
     width: 100%;
     margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Timeline Marker */
+.timeline-item.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .timeline-marker {
     position: absolute;
     top: 0;
     left: 50%;
     width: 16px;
     height: 16px;
-    background-color: #545556; /* Color of the marker */
-    border: 2px solid #fff; /* White border around the marker */
+    background-color: var(--accent);
+    border: 2px solid #fff;
     border-radius: 50%;
     transform: translateX(-50%);
     z-index: 1;
 }
 
-/* Timeline Content */
 .timeline-content {
     width: 45%;
-    padding: 10px;
-    background-color: #F5F5F5; /* Light background for content */
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px 20px;
+    background-color: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
-/* Alternate alignment for even items */
+.timeline-content ul {
+    margin-top: 8px;
+}
+
+.timeline-content ul li {
+    font-size: 0.92em;
+    color: var(--muted);
+    margin-bottom: 4px;
+}
+
 .timeline-item:nth-child(even) .timeline-content {
-    margin-left: auto; /* Push even items to the right */
+    margin-left: auto;
 }
 
-/* Timeline Date */
 .timeline-date {
     font-size: 0.9em;
-    color: #757575; /* Grey color for the date */
+    color: var(--accent);
+    font-weight: 600;
     margin-bottom: 5px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .timeline::before {
-        left: 20px; /* Move the line to the left on small screens */
+        left: 20px;
     }
 
     .timeline-marker {
-        left: 20px; /* Move the marker to the left on small screens */
+        left: 20px;
     }
 
     .timeline-content {
-        width: calc(100% - 60px); /* Full width on small screens */
-        margin-left: 40px; /* Add space for the marker */
+        width: calc(100% - 60px);
+        margin-left: 40px;
     }
 
     .timeline-item:nth-child(even) .timeline-content {
-        margin-left: 40px; /* Align all items to the left on small screens */
+        margin-left: 40px;
     }
 }
 
-/* Emphasize School Names */
-#education .school-name {
-    font-size: 1.2em; /* Larger font size */
-    font-weight: 600; /* Bold text */
-    color: #333333; /* Blue color for emphasis */
-    margin-top: 10px; /* Space above the school name */
-    margin-bottom: 5px; /* Space below the school name */
+#education .school-name,
+#experience .school-name {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--text);
+    display: inline-block;
+    margin-top: 6px;
+    margin-bottom: 5px;
 }
 
-/* Optional: Add an Icon Next to School Names */
-#education .school-name::before {
-    content: '\f19c'; /* Font Awesome university icon */
-    font-family: 'Font Awesome 5 Free'; /* Font Awesome font */
-    font-weight: 900; /* Solid style */
-    margin-right: 10px; /* Space between icon and text */
-    color: #333333; /* Match the text color */
-}
-/* Skills Section Background */
-#skills {
-    background-color: #F0EEA; /* Pastel blue background */
-    padding: 40px 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    text-align: center; /* Center-align text */
+#education .school-name::before,
+#experience .school-name::before {
+    content: '\f19c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: 10px;
+    color: var(--accent);
 }
 
-/* Extracurriculars Section */
-/* Extracurriculars Section */
-#extracurriculars {
-    background-color: #f9f9f9; /* Light background color for the section */
-    padding: 40px 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.extracurriculars-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow boxes to wrap to the next line if needed */
-    gap: 20px; /* Space between boxes */
-    justify-content: space-between; /* Distribute boxes evenly */
-}
-
-.extracurricular-box {
-    flex: 1 1 calc(33.333% - 20px); /* Three boxes per row with gap */
-    background-color: #FFE0B2; /* Pastel orange */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.extracurricular-box h3 {
-    margin-bottom: 10px;
-    color: #333; /* Dark text color */
-}
-
-.extracurricular-box p {
-    color: #555; /* Slightly lighter text color */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .extracurricular-box {
-        flex: 1 1 calc(50% - 20px); /* Two boxes per row on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .extracurricular-box {
-        flex: 1 1 100%; /* One box per row on very small screens */
-    }
-}
 /* Skills Container */
 .skills-container {
-    max-width: 800px; /* Limit width for better readability */
-    margin: 0 auto; /* Center the container */
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-/* Skill Category Headings */
 .skill-category {
-    color: #616162; /* Blue color for category headings */
-    font-size: 1.3em;
-    margin-top: 20px; /* Space above the heading */
-    margin-bottom: 15px; /* Space below the heading */
+    color: var(--accent-dark);
+    font-size: 1.2em;
+    margin-top: 24px;
+    margin-bottom: 15px;
 }
 
-/* Skill Items Container */
+.skill-category:first-child {
+    margin-top: 0;
+}
+
 .skill-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px; /* Space between skill items */
-    justify-content: center; /* Center skill items */
+    gap: 12px;
+    justify-content: center;
 }
 
-/* Skill Item Styling */
 .skill-item {
-    background-color: #FFD1DC; /* Pastel pink */
-    color: #333; /* Dark grey text */
-    padding: 10px 20px;
-    border-radius: 25px; /* Rounded corners */
-    font-size: 1em;
+    background-color: var(--accent-light);
+    color: var(--accent-dark);
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 0.95em;
     font-weight: 600;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Start invisible */
-    transform: translateX(-100%); /* Start off-screen to the left */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-/* Animation for Skill Items */
 .skill-item.in-view {
-    opacity: 1; /* Fade in */
-    transform: translateX(0); /* Move to original position */
+    opacity: 1;
+    transform: translateX(0);
 }
 
-
-/* Projects Section */
-#projects {
-    background-color: #f9f9f9; /* Light background color for the section */
-    padding: 40px 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.projects-container {
+/* Extracurriculars Section */
+.extracurriculars-container {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    gap: 20px; /* Space between boxes */
-    justify-content: space-between; /* Distribute boxes evenly */
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.project-box {
-    flex: 1 1 calc(33.333% - 20px); /* Three boxes per row with gap */
-    background-color: #D8BFD8; /* Pastel red */
+.extracurricular-box {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit text color */
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
 }
 
-.project-box:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+.extracurricular-box.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.project-box h3 {
+.extracurricular-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.extracurricular-box h3 {
     margin-bottom: 10px;
-    color: #333; /* Dark text color */
-    font-size: 1.5em; /* Larger font size for project title */
+    color: var(--text);
 }
 
-.project-box .line {
-    width: 50px; /* Length of the line */
-    height: 2px; /* Thickness of the line */
-    background-color: #333; /* Dark color for the line */
-    margin: 10px 0; /* Space above and below the line */
+.extracurricular-box p {
+    color: var(--muted);
+    font-size: 0.95em;
 }
 
-.project-box p {
-    color: #555; /* Slightly lighter text color */
-    font-size: 1em; /* Standard font size for description */
-}
-a {
-    color: #007BFF; /* Default link color */
-    text-decoration: underline; /* Default underline */
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit text color */
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-    .project-box {
-        flex: 1 1 calc(50% - 20px); /* Two boxes per row on smaller screens */
+    .extracurricular-box {
+        flex: 1 1 calc(50% - 20px);
     }
 }
 
 @media (max-width: 480px) {
-    .project-box {
-        flex: 1 1 100%; /* One box per row on very small screens */
+    .extracurricular-box {
+        flex: 1 1 100%;
     }
 }
-.section {
-    background-color: white;
-    margin-bottom: 20px;
+
+/* Projects Section */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-box {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease-out;
+    text-decoration: none;
+    color: inherit;
+    opacity: 0;
+    transform: translateY(20px);
 }
 
-/* Headings */
+.project-box.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--accent);
+}
+
+.project-tag {
+    align-self: flex-start;
+    background-color: var(--accent-light);
+    color: var(--accent-dark);
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.project-box h3 {
+    margin-bottom: 8px;
+    color: var(--text);
+    font-size: 1.3em;
+}
+
+.project-box .line {
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent);
+    margin: 4px 0 12px;
+}
+
+.project-box p {
+    color: var(--muted);
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Section base */
+.section {
+    background-color: var(--surface);
+    margin-bottom: 24px;
+    padding: 30px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
 h1, h2 {
-    color: #333;
-    font-weight: 600;
+    color: var(--text);
+    font-weight: 700;
 }
 
-/* Styling for lists */
-ul {
-    list-style: none;
-    padding-left: 0;
+.section h2 {
+    margin-bottom: 24px;
+    font-size: 1.6em;
+    text-align: center;
 }
 
-ul li {
-    padding-left: 20px;
-    position: relative;
-}
-
-ul li::before {
-    content: '\2022';
-    position: absolute;
-    left: 0;
-    font-size: 20px;
-    color: #007BFF;
+.section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent);
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
 /* Link styling */
 a {
-    color: #007BFF;
+    color: var(--accent);
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Section with background */
-#bio, #education, #skills, #experience, #interests, #projects, #information, #contact {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-#bio h2, #education h2, #skills h2, #experience h2, #interests h2, #projects h2, #information h2, #contact h2 {
-    margin-top: 10px;
-    color: #444;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
     .container {
-        width: 90%;
+        width: 100%;
     }
 
-    #bio, #education, #skills, #experience, #interests, #projects, #information, #contact {
-        padding: 15px;
+    .section {
+        padding: 20px 15px;
     }
 
     h1 {

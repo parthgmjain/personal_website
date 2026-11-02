@@ -3,466 +3,526 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Parth Jain is a computer science student at UC Merced and research assistant, graduating in May 2027 and looking for full-time software engineering roles.">
+        <title>Parth Jain</title>
+        <script>document.documentElement.classList.add('js');</script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <title>Parth Jain</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <!-- Nav -->
-        <nav class="navbar">
-            <a href="#" class="nav-brand">Parth Jain</a>
-            <div class="nav-links">
-                <a href="#bio">Bio</a>
-                <a href="#experience">Experience</a>
-                <a href="#education">Education</a>
-                <a href="#skills">Skills</a>
-                <a href="#extracurriculars">Extracurriculars</a>
-                <a href="#projects">Projects</a>
-            </div>
-        </nav>
+        <a class="skip" href="#main">Skip to content</a>
 
-        <div class="container">
-            <!-- Hero Section -->
-            <div class="hero-section">
-                <div class="blob blob-1" aria-hidden="true"></div>
-                <div class="blob blob-2" aria-hidden="true"></div>
-                <div class="blob blob-3" aria-hidden="true"></div>
-                <div class="content">
-                    <img src="images/Nature.jpg" alt="Nature" class="profile-image" width="300" height="200">
-                    <div class="text">
-                        <h1>Hello my name is <span class="gradient-text">Parth</span></h1>
-                        <p>Welcome to my personal website!</p>
-                        <p>Explore to learn more about me!</p>
-                        <!-- Scroll Button -->
-                        <button class="scroll-button pill-button" onclick="scrollToNextSection()">Learn More</button>
-                    </div>
+        <header class="nav">
+            <div class="nav-inner">
+                <a class="wordmark" href="#top">Parth Jain</a>
+                <nav class="nav-links" aria-label="Sections">
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#education">Education</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#activities">Activities</a>
+                </nav>
+                <div class="nav-actions">
+                    <a class="nav-icon" href="https://github.com/parthgmjain" target="_blank" rel="noopener" aria-label="Parth on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    <a class="nav-icon" href="https://www.linkedin.com/in/parth-jain05/" target="_blank" rel="noopener" aria-label="Parth on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    <a class="btn btn-small" href="mailto:parthgmjain@gmail.com">Email me</a>
                 </div>
             </div>
+        </header>
 
-            <div class="section" id="bio">
-                <div class="bio-content">
-                    <div class="bio-details">
-                        <p><strong>NAME:</strong> <span class="bio-text">Parth Jain</span></p>
-                        <p><strong>PRONOUNS:</strong> <span class="bio-text">He/Him</span></p>
-                        <p><strong>AGE:</strong> <span class="bio-text">21</span></p>
-                        <p><strong>LOCATION:</strong> <span class="bio-text">Cupertino</span></p>
-                        <p><strong>SCHOOL:</strong> <span class="bio-text">UC Merced</span></p>
+        <main id="main">
+            <!-- Hero + the front folder (bio) -->
+            <section class="hero" id="top">
+                <div class="wrap hero-grid">
+                    <div class="hero-text">
+                        <h1>Hi, I'm Parth.</h1>
+                        <p class="lead">CS student at UC Merced and research assistant.</p>
+                        <div class="hero-actions">
+                            <a class="btn" href="#projects">See my projects</a>
+                            <a class="btn btn-soft" href="https://github.com/parthgmjain" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+                            <a class="btn btn-soft" href="https://www.linkedin.com/in/parth-jain05/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in" aria-hidden="true"></i>LinkedIn</a>
+                        </div>
                     </div>
-                    <div class="bio-info">
-                        <p>I'm a Computer Science &amp; Engineering major at UC Merced, Class of 2027, and I spent
-                            the 2025&ndash;26 year studying abroad at the University of Copenhagen. I'm currently a
-                            Research Assistant in the Language, Learning, and Teaching Lab, building computer vision
-                            models that recognize hand gestures in children with disabilities, and I interned as a web
-                            developer at Quicken in 2025. I love shipping fast at hackathons &mdash; recent builds
-                            include an MCP server for AI job-search agents, a tenant-rights RAG assistant, and a
-                            squat-form coach that won 1st place at SASE Hacks &mdash; and I'm also deep into a chess
-                            roguelike called Castlelot. Beyond code, I've been part of the Farm Robotics Challenge,
-                            the Battery Workforce Challenge, AIAA Design/Build/Fly, and Theta Tau.
-                            Outside of school, I enjoy hiking, cooking, playing video games, watching movies and
-                            shows, and reading &mdash; especially anything in the fantasy genre.</p>
+                    <img class="hero-photo" src="images/parth-hero.jpg" width="1000" height="750" alt="Parth standing by a rocky stream in a forest">
+                </div>
 
-                        <!-- GitHub and LinkedIn Buttons -->
-                        <div class="social-buttons">
-                            <a href="https://github.com/parthgmjain" target="_blank" class="social-button github">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/parth-jain05/" target="_blank" class="social-button linkedin">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
+                <div class="wrap folder" id="bio">
+                    <nav class="tabs" aria-label="Jump to a section">
+                        <a class="tab t-lav" href="#experience">Experience</a>
+                        <a class="tab t-peach" href="#projects">Projects</a>
+                        <a class="tab t-mint" href="#education">Education</a>
+                        <a class="tab t-sky" href="#skills">Skills</a>
+                        <a class="tab t-pink" href="#activities">Activities</a>
+                    </nav>
+                    <div class="folder-front">
+                        <h2 class="visually-hidden">About me</h2>
+                        <div class="bento">
+                            <div class="tile tile-bio reveal">
+                                <p>I'm a Computer Science &amp; Engineering major at UC Merced, Class of 2027. I interned as a web developer at Quicken in 2025, and I like shipping fast at hackathons: an MCP server for AI job-search agents, a tenant-rights RAG assistant, and a squat-form coach that won 1st place at SASE Hacks. I'm also deep into a chess roguelike called Castlelot.</p>
+                            </div>
+                            <div class="tile tile-facts reveal" style="--i:1">
+                                <dl>
+                                    <div><dt>Name</dt><dd>Parth Jain</dd></div>
+                                    <div><dt>Pronouns</dt><dd>He/Him</dd></div>
+                                    <div><dt>Age</dt><dd>21</dd></div>
+                                    <div><dt>Location</dt><dd>Cupertino, CA</dd></div>
+                                    <div><dt>School</dt><dd>UC Merced</dd></div>
+                                </dl>
+                                <div class="social">
+                                    <a class="social-btn" href="https://github.com/parthgmjain" target="_blank" rel="noopener" aria-label="Parth on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                                    <a class="social-btn" href="https://www.linkedin.com/in/parth-jain05/" target="_blank" rel="noopener" aria-label="Parth on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                                    <a class="social-btn" href="mailto:parthgmjain@gmail.com" aria-label="Email Parth"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <div class="tile tile-lav reveal" style="--i:2">
+                                <h3>Right now</h3>
+                                <p>Research Assistant in the Language, Learning, and Teaching Lab, building a computer vision model that recognizes hand gestures in children with disabilities.</p>
+                            </div>
+                            <div class="tile tile-mint reveal" style="--i:3">
+                                <h3>Last year</h3>
+                                <p>Studied abroad at the University of Copenhagen from August 2025 to June 2026.</p>
+                            </div>
+                            <div class="tile tile-pink reveal" style="--i:4">
+                                <img class="tile-pic" src="images/found/yosemite.jpg" width="675" height="900" loading="lazy" alt="Whitewater rushing between granite boulders on the Merced River in Yosemite">
+                                <h3>Off the keyboard</h3>
+                                <p>Hiking, cooking, video games, movies and shows, and reading, especially anything in the fantasy genre.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="section" id="experience">
-                <h2>Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Research Assistant</h3>
-                            <p class="timeline-date">October 2026 - Present</p>
-                            <p><span class="school-name">Language, Learning, and Teaching Lab, UC Merced</span></p>
+            <!-- Experience -->
+            <section class="band b-lav" id="experience">
+                <div class="wrap">
+                    <h2>Experience</h2>
+                    <div class="cols-2">
+                        <article class="win reveal">
+                            <div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>research-assistant.md</span></div>
+                            <div class="win-body">
+                                <h3>Research Assistant</h3>
+                                <p class="meta">Language, Learning, and Teaching Lab, UC Merced</p>
+                                <p class="date">Oct 2026 - Present</p>
+                                <ul>
+                                    <li>Developing a computer vision model in PyTorch and OpenCV to detect and classify hand gestures in children with disabilities, helping teachers adapt instruction</li>
+                                    <li>Training and iterating on models using Pinnacles, UC Merced's HPC cluster</li>
+                                    <li>Running experiments across gesture analysis, eye tracking, and memory studies, and supporting the lab from experiment design through full-stack application builds</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="win reveal" style="--i:1">
+                            <div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>quicken-intern.md</span></div>
+                            <div class="win-body">
+                                <h3>Web Development Intern</h3>
+                                <p class="meta">Quicken, Menlo Park, CA</p>
+                                <p class="date">May 2025 - Aug 2025</p>
+                                <ul>
+                                    <li>Independently built a Python-based AI chatbot framework that ingests CSV uploads and returns context-specific responses grounded in the uploaded data</li>
+                                    <li>Developed a modular table component on the BigCommerce API that renders product data with 12+ SKU-dependent sub-fields and auto-generates column sorters based on detected data types</li>
+                                    <li>Migrated 3 financial calculators (Retirement, Budget, 401(k)) to the Eleventy framework, making them 10x faster and consolidating shared code for easier maintenance</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects: names are the index, the preview card is the signature move -->
+            <section class="band b-peach" id="projects">
+                <div class="wrap">
+                    <h2>Projects</h2>
+                    <p class="section-lead">Twelve builds. The bar on each card is how many hours it took, from a 24-hour hackathon to 175 hours of solo work.</p>
+
+                    <div class="filters" role="group" aria-label="Filter projects">
+                        <button class="chip is-on" type="button" data-filter="all" aria-pressed="true">All</button>
+                        <button class="chip" type="button" data-filter="ai" aria-pressed="false">AI/ML</button>
+                        <button class="chip" type="button" data-filter="web" aria-pressed="false">Web</button>
+                        <button class="chip" type="button" data-filter="game" aria-pressed="false">Game</button>
+                        <button class="chip" type="button" data-filter="blockchain" aria-pressed="false">Blockchain</button>
+                    </div>
+
+                    <div class="work">
+                        <div class="work-index">
+                            <ul class="names names-big">
+                                <li data-cat="blockchain" data-file="carbex.sol">
+                                    <button class="name" type="button" aria-expanded="false">Carbex</button>
+                                    <div class="detail">
+                                        <p class="d-tag">Blockchain</p>
+                                        <p class="d-hours" style="--h:0.27"><span class="bar" aria-hidden="true"><i></i></span><span class="hrs">48 hrs</span></p>
+                                        <p class="d-desc">A blockchain carbon-credit trading platform built at ETH Prague. Six Solidity contracts tokenize credits as ERC-1155 assets for trustless peer-to-peer trading at about 60k gas per transfer on Sepolia, with on-chain retirement tracking to prevent double-counting and fraud.</p>
+                                        <p class="d-stack">Solidity, Hardhat, Ethereum</p>
+                                        <a class="d-link" href="https://github.com/parthgmjain/Carbon-DEX" target="_blank" rel="noopener">View on GitHub</a>
+                                    </div>
+                                </li>
+                                <li data-cat="ai" data-file="posevision.py">
+                                    <button class="name" type="button" aria-expanded="false">PoseVision</button>
+                                    <div class="detail">
+                                        <p class="d-tag">Computer vision</p>
+                                        <p class="d-hours" style="--h:0.27"><span class="bar" aria-hidden="true"><i></i></span><span class="hrs">48 hrs</span></p>
+                                        <p class="d-award"><i class="fas fa-trophy" aria-hidden="true"></i> 1st Place, SASE Hacks</p>
+                                        <p class="d-desc">Analyzes squat videos to detect 10 common form flaws at 30 FPS, extracting 33 body landmarks and joint angles with MediaPipe and OpenCV. Reached 90% flaw-detection accuracy on a team-built dataset of 70+ labeled videos and turns the data into personalized corrective feedback.</p>
+                                        <p class="d-stack">Python, MediaPipe, OpenCV, NumPy</p>
+                                        <a class="d-link" href="https://github.com/parthgmjain/PoseVision" target="_blank" rel="noopener">View on GitHub</a>
+                                    </div>
+                                </li>
+                                <li data-cat="ai web" data-file="techlabs.md">
+                                    <button class="name" type="button" aria-expanded="false">TechLabs</button>
+                                    <div class="detail">
+                                        <p class="d-tag">Full-stack and ML</p>
+                                        <p class="d-hours" style="--h:0.86"><span class="bar" aria-hidden="true"><i></i></span><span class="hrs">150 hrs</span></p>
+                                        <p class="d-desc">Led a team of 5 building a full-stack admissions guidance platform covering 500+ universities and 2,000+ programs. Owned the AI/ML pipeline, a hybrid KNN and context-based recommender that improved precision@5 by 30% over a KNN-only baseline, plus an automated scraper and AI enrichment pipeline, all containerized with Docker Compose.</p>
+                                        <p class="d-stack">FastAPI, React, Vite, PostgreSQL, scikit-learn, pandas, Docker</p>
+                                        <a class="d-link" href="https://github.com/parthgmjain/TechLabs" target="_blank" rel="noopener">View on GitHub</a>
+                                    </div>
+                                </li>
+                                <li data-cat="game" data-file="castlelot.gd">
+                                    <button class="name" type="button" aria-expanded="false">Castlelot</button>
+                                    <div class="detail">
+                                        <p class="d-tag">Game dev</p>
+                                        <p class="d-hours" style="--h:1"><span class="bar" aria-hidden="true"><i></i></span><span class="hrs">175 hrs</span></p>
+                                        <p class="d-desc">A solo-developed chess roguelike with a gambling economy: 49 playable pieces (43 custom), 17 run modifiers, and 4 difficulty tiers with procedural zone and boss generation. 6.9k lines of game logic are backed by 9.6k lines of tests at 75% coverage, with a greedy-search AI opponent and minimax and MCTS opponents in development.</p>
+                                        <p class="d-stack">Godot, GDScript</p>
+                                        <a class="d-link" href="https://github.com/parthgmjain/Castlelot" target="_blank" rel="noopener">View on GitHub</a>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <h3 class="more-title">More builds</h3>
+                            <ul class="names names-more">
+                                <li data-cat="ai" data-file="offerlog.ts">
+                                    <button class="name" type="button" aria-expanded="false">Offerlog</button>
+                                    <div class="detail">
+                                        <p class="d-tag">MCP and AI agents</p>
+                                        <p class="d-hours" style="--h:0.27"><span class="bar" aria-hidden="true"><i></i></span><span class="hrs">48 hrs</span></p>
+                                        <p class="d-desc">An MCP server that lets AI agents log, update, and track job applications through scoped tools with deny-by-default permissions: agents can add and update, but never delete or send anything. Every tool call lands in an append-only audit log, and a Next.js dashboard with Auth0 login and MFA handles review and deletions.</p>
+                                        <p class="d-stack">TypeScript, MCP SDK, PostgreSQL, Next.js, Tailwind, Auth0</p>
+                                        <a class="d-link" href="https://github.com/parthgmjain/Pipeline" target="_blank" rel="noopener">View on GitHub</a>
+                                    </div>
+                                </li>
+                                <li data-cat="ai" data-file="leaselens.py">
+                                    <button class="name" type="button" aria-expanded="false">LeaseLens</button>
+                                    <div class="detail">
+                                        <p class="d-tag">RAG and legal tech</p>
+                                        <p class="d-hours" style="--h:0.27"><span class="bar" aria-hidden="true"><i></i></span><span class="hrs">48 hrs</span></p>
+                                        <p class="d-desc">A RAG assistant that answers California tenant-rights questions for college students in plain English, citing the exact Civil Code section behind every answer and refusing when its sources don't cover the question. An evaluation harness measures recall@5, citation accuracy, and refusal correctness in CI on every push.</p>
+                                        <p class="d-stack">Python, FastAPI, PostgreSQL (pgvector), OpenAI API, Next.js, TypeScript</p>
+                                        <a class="d-link" href="https://github.com/parthgmjain/LeaseLens" target="_blank" rel="noopener">View on GitHub</a>
+                                    </div>
+                                </li>
+                                <li data-cat="ai web" data-file="credit-compass.py">
+                                    <button class="name" type="button" aria-expanded="false">Credit Compass</button>
+                                    <div class="detail">
+                                        <p class="d-tag">AI and fintech</p>
+                                        <p class="d-hours" style="--h:0.14"><span class="bar" aria-hidden="true"><i></i></span><span class="hrs">24 hrs</span></p>
+                                        <p class="d-award"><i class="fas fa-trophy" aria-hidden="true"></i> Alumni Choice Award, HackMerced</p>
+                                        <p class="d-desc">Personalized credit-building advice through a conversational interface powered by Letta and the OpenAI API, with a card recommendation engine over 15+ credit products and a dynamic 12-month credit timeline. Letta's memory keeps context across sessions, cutting repeated user input by 40%.</p>
+                                        <p class="d-stack">Python, Flask, Letta, OpenAI API</p>
+                                        <a class="d-link" href="https://github.com/parthgmjain/CreditCompass" target="_blank" rel="noopener">View on GitHub</a>
+                                    </div>
+                                </li>
+                                <li data-cat="web" data-file="cleantube.js">
+                                    <button class="name" type="button" aria-expanded="false">CleanTube</button>
+                                    <div class="detail">
+                                        <p class="d-tag">Chrome extension</p>
+                                        <p class="d-hours" style="--h:0.14"><span class="bar" aria-hidden="true"><i></i></span><span class="hrs">24 hrs</span></p>
+                                        <p class="d-desc">A Manifest V3 extension that lets you fully customize YouTube: keyword filtering on titles and channels plus 20 toggles for Shorts, comments, end cards, and autoplay. A MutationObserver reapplies filters across 7 page regions as content loads, with settings synced via chrome.storage.</p>
+                                        <p class="d-stack">JavaScript, Chrome Extensions API (MV3), HTML/CSS</p>
+                                        <a class="d-link" href="https://github.com/parthgmjain/Clean-Tube" target="_blank" rel="noopener">View on GitHub</a>
+                                    </div>
+                                </li>
+                                <li data-cat="web" data-file="pantry-panther.jsx">
+                                    <button class="name" type="button" aria-expanded="false">Pantry Panther</button>
+                                    <div class="detail">
+                                        <p class="d-tag">Web app</p>
+                                        <p class="d-hours" style="--h:0.14"><span class="bar" aria-hidden="true"><i></i></span><span class="hrs">24 hrs</span></p>
+                                        <p class="d-desc">A hackathon app that recommends recipes from a 15k-recipe dataset based on the ingredients you already have, ranking matches across 1,000+ unique ingredients in under 100 ms, with keyword search, cook-time and rating filters, and a saved-recipes list.</p>
+                                        <p class="d-stack">React, Vite, JavaScript, PapaParse</p>
+                                        <a class="d-link" href="https://github.com/parthgmjain/PantryPanther" target="_blank" rel="noopener">View on GitHub</a>
+                                    </div>
+                                </li>
+                                <li data-cat="web" data-file="recall-royale.py">
+                                    <button class="name" type="button" aria-expanded="false">Recall Royale</button>
+                                    <div class="detail">
+                                        <p class="d-tag">Flask app</p>
+                                        <p class="d-hours" style="--h:0.14"><span class="bar" aria-hidden="true"><i></i></span><span class="hrs">24 hrs</span></p>
+                                        <p class="d-desc">Led a team of 3 at Open Source Hackfest to build a gamified flashcard app. A 3-step deck builder sorts cards into easy, medium, and hard tiers and creates a dedicated SQLite table per subject, and a card-flip play mode adds scoring, a timer, and typed-answer checking.</p>
+                                        <p class="d-stack">Python, Flask, SQLite, JavaScript, Jinja</p>
+                                        <a class="d-link" href="https://github.com/parthgmjain/Recall-Royale" target="_blank" rel="noopener">View on GitHub</a>
+                                    </div>
+                                </li>
+                                <li data-cat="web" data-file="personal-website.html">
+                                    <button class="name" type="button" aria-expanded="false">Personal Website</button>
+                                    <div class="detail">
+                                        <p class="d-tag">Web</p>
+                                        <p class="d-desc">This site, built from scratch with plain HTML, CSS and JavaScript and redesigned several times along the way.</p>
+                                        <p class="d-stack">HTML, CSS, JavaScript</p>
+                                        <a class="d-link" href="https://github.com/parthgmjain/personal_website" target="_blank" rel="noopener">View on GitHub</a>
+                                    </div>
+                                </li>
+                                <li data-cat="game" data-file="blackjack.cpp">
+                                    <button class="name" type="button" aria-expanded="false">Blackjack</button>
+                                    <div class="detail">
+                                        <p class="d-tag">C++</p>
+                                        <p class="d-desc">A command-line Blackjack game written in C++.</p>
+                                        <p class="d-stack">C++</p>
+                                        <a class="d-link" href="https://github.com/parthgmjain/Blackjack" target="_blank" rel="noopener">View on GitHub</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <aside class="preview" aria-label="Project preview" aria-live="polite">
+                            <div class="win">
+                                <div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="preview-file">carbex.sol</span></div>
+                                <div class="win-body preview-body"></div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education: a ledger beside a picture of where the year abroad happened -->
+            <section class="band b-mint" id="education">
+                <div class="wrap">
+                    <h2>Education</h2>
+                    <div class="edu">
+                        <ul class="ledger">
+                            <li class="reveal">
+                                <p class="date">2023 - May 2027</p>
+                                <h3>B.S. in Computer Science &amp; Engineering</h3>
+                                <p class="meta">University of California, Merced</p>
+                                <p>Coursework: Machine Learning A &amp; B, Web Recommenders, Numerical Optimisation, Robotic Experiments, Program Analysis and Transformation, Algorithm Design and Analysis, Data Structures, Computer Organization, Discrete Math.</p>
+                            </li>
+                            <li class="reveal" style="--i:1">
+                                <p class="date">Aug 2025 - Jun 2026</p>
+                                <h3>Study Abroad (UCEAP)</h3>
+                                <p class="meta">University of Copenhagen, Denmark</p>
+                            </li>
+                            <li class="reveal" style="--i:2">
+                                <p class="date">2019 - 2023</p>
+                                <h3>High School Diploma</h3>
+                                <p class="meta">Monta Vista High School</p>
+                            </li>
+                        </ul>
+                        <figure class="edu-pic reveal">
+                            <img src="images/found/copenhagen.jpg" width="1000" height="750" loading="lazy" alt="Colourful townhouses and wooden sailing ships along the Nyhavn canal in Copenhagen">
+                            <figcaption>Nyhavn, Copenhagen</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills: one window, one row per group -->
+            <section class="band b-sky" id="skills">
+                <div class="wrap">
+                    <h2>Skills</h2>
+                    <div class="win reveal">
+                        <div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>skills.json</span></div>
+                        <div class="win-body skills-body">
+                            <div class="skill-row">
+                                <h3>languages</h3>
+                                <ul class="chips">
+                                    <li>Python</li><li>C++</li><li>C</li><li>C#</li><li>Java</li><li>JavaScript</li><li>TypeScript</li><li>SQL</li><li>GDScript</li><li>Solidity</li><li>Assembly</li><li>MATLAB</li><li>HTML/CSS</li>
+                                </ul>
+                            </div>
+                            <div class="skill-row">
+                                <h3>ml-and-ai</h3>
+                                <ul class="chips">
+                                    <li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li><li>NumPy</li><li>pandas</li><li>Hugging Face</li><li>OpenCV</li><li>MediaPipe</li><li>FAISS</li><li>sentence-transformers</li><li>pgvector</li><li>LangChain</li><li>Letta</li><li>OpenAI API</li><li>MCP</li>
+                                </ul>
+                            </div>
+                            <div class="skill-row">
+                                <h3>frameworks</h3>
+                                <ul class="chips">
+                                    <li>React</li><li>Next.js</li><li>Tailwind</li><li>Vite</li><li>Node.js</li><li>Express</li><li>Flask</li><li>FastAPI</li><li>Jinja</li><li>Eleventy</li><li>ROS</li><li>OpenGL</li><li>Hardhat</li><li>Godot</li>
+                                </ul>
+                            </div>
+                            <div class="skill-row">
+                                <h3>databases</h3>
+                                <ul class="chips">
+                                    <li>PostgreSQL</li><li>SQLite</li>
+                                </ul>
+                            </div>
+                            <div class="skill-row">
+                                <h3>tools</h3>
+                                <ul class="chips">
+                                    <li>Docker</li><li>Docker Compose</li><li>Git/GitHub</li><li>GitHub Actions (CI/CD)</li><li>Linux</li><li>HPC (Slurm)</li><li>Auth0</li><li>Chrome Extensions API</li><li>Jupyter Notebook</li><li>Autodesk Inventor</li><li>Claude Code</li><li>Cursor</li><li>GitHub Copilot</li>
+                                </ul>
+                            </div>
+                            <div class="skill-row">
+                                <h3>spoken</h3>
+                                <ul class="chips">
+                                    <li>English</li><li>Hindi</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Activities: plain text blocks beside a picture of the campus -->
+            <section class="band b-pink" id="activities">
+                <div class="wrap">
+                    <h2>Activities</h2>
+                    <div class="act">
+                        <div class="act-list">
+                            <article class="reveal">
+                                <h3>Farm Robotics Challenge</h3>
+                                <p class="date">Aug 2024 - May 2025</p>
+                                <p class="meta">Software (Sensors &amp; Computer Vision)</p>
+                                <p>Developed C++ sensor integration and computer vision software for an autonomous drone built to improve pesticide and herbicide distribution on farms.</p>
+                            </article>
+                            <article class="reveal" style="--i:1">
+                                <h3>Battery Workforce Challenge</h3>
+                                <p class="date">Aug 2024 - May 2025</p>
+                                <p class="meta">Hardware &amp; Software</p>
+                                <p>Contributed to the structural design and build of an electric vehicle battery pack while planning the pack's software in MATLAB.</p>
+                            </article>
+                            <article class="reveal" style="--i:2">
+                                <h3>AIAA Design/Build/Fly</h3>
+                                <p class="date">Aug 2023 - Jan 2025</p>
+                                <p class="meta">Hardware &amp; Aerodynamics</p>
+                                <p>Built and refined wing structures for a competition aircraft on a 10-person team, performed the aerodynamics calculations behind the wing design, and contributed to the aircraft's supporting code.</p>
+                            </article>
+                            <article class="reveal" style="--i:3">
+                                <h3>Theta Tau</h3>
+                                <p class="date">Aug 2024 - May 2025</p>
+                                <p class="meta">Professional Engineering Fraternity</p>
+                                <p>Served as Scholarship Chair (Jan - May 2025) and previously as Community Service &amp; Brotherhood Chair (Aug 2024 - Jan 2025).</p>
+                            </article>
+                        </div>
+                        <figure class="act-pic reveal">
+                            <img src="images/found/uc-merced.jpg" width="599" height="900" loading="lazy" alt="The curved steel Beginnings sculpture on the lawn of the UC Merced campus under a blue sky">
+                            <figcaption>UC Merced campus</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- The back of the card -->
+        <footer class="back">
+            <div class="wrap">
+                <div class="postcard">
+                    <div class="postcard-body">
+                        <div class="message">
+                            <h2>Hiring new grads?</h2>
+                            <p>I graduate in May 2027 with a B.S. in Computer Science &amp; Engineering and I'm looking for full-time software engineering roles. Email me and I'll reply fast.</p>
+                        </div>
+                        <div class="address">
+                            <img class="stamp" src="images/parth-stamp.jpg" width="264" height="352" alt="Parth smiling at the camera" loading="lazy">
                             <ul>
-                                <li>Developing a computer vision model in PyTorch and OpenCV to detect and classify hand gestures in children with disabilities, helping teachers adapt instruction</li>
-                                <li>Training and iterating on models using Pinnacles, UC Merced's HPC cluster</li>
-                                <li>Running experiments across gesture analysis, eye tracking, and memory studies, and supporting the lab from experiment design through full-stack application builds</li>
+                                <li><a href="mailto:parthgmjain@gmail.com">parthgmjain@gmail.com</a></li>
+                                <li><a href="https://github.com/parthgmjain" target="_blank" rel="noopener">github.com/parthgmjain</a></li>
+                                <li><a href="https://www.linkedin.com/in/parth-jain05/" target="_blank" rel="noopener">linkedin.com/in/parth-jain05</a></li>
+                                <li>Cupertino, CA</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Web Development Intern</h3>
-                            <p class="timeline-date">May 2025 - August 2025</p>
-                            <p><span class="school-name">Quicken, Menlo Park, CA</span></p>
-                            <ul>
-                                <li>Independently built a Python-based AI chatbot framework that ingests CSV uploads and returns context-specific responses grounded in the uploaded data</li>
-                                <li>Developed a modular table component on the BigCommerce API that renders product data with 12+ SKU-dependent sub-fields and auto-generates column sorters based on detected data types</li>
-                                <li>Migrated 3 financial calculators (Retirement, Budget, 401(k)) to the Eleventy framework, making them 10x faster and consolidating shared code for easier maintenance</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <p class="imprint">&copy; 2026 Parth Jain</p>
+                    <p class="credits">Photos via Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Kopenhagen_(DK),_Nyhavn_--_2017_--_1538.jpg" target="_blank" rel="noopener">Nyhavn</a> by Dietmar Rabich (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:UC_Merced_Beginnings_Statue.jpg" target="_blank" rel="noopener">Beginnings Statue</a> by Veronica Adrover (CC BY 4.0), <a href="https://commons.wikimedia.org/wiki/File:Merced_River,_Yosemite_National_Park,_California_9.jpg" target="_blank" rel="noopener">Merced River</a> by GualdimG (CC BY-SA 4.0).</p>
                 </div>
             </div>
-
-            <div class="section" id="education">
-                <h2>Education</h2>
-                <div class="timeline">
-                    <!-- Timeline Item 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>B.S. in Computer Science &amp; Engineering</h3>
-                            <p class="timeline-date">2023 - May 2027</p>
-                            <p><span class="school-name">University of California, Merced</span></p>
-                            <p>Coursework: Machine Learning A &amp; B, Web Recommenders, Numerical Optimisation, Robotic
-                                Experiments, Program Analysis and Transformation, Algorithm Design and Analysis, Data
-                                Structures, Computer Organization, Discrete Math.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Study Abroad (UCEAP)</h3>
-                            <p class="timeline-date">August 2025 - June 2026</p>
-                            <p><span class="school-name">University of Copenhagen, Denmark</span></p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>High School Diploma</h3>
-                            <p class="timeline-date">2019 - 2023</p>
-                            <p><span class="school-name">Monta Vista High School</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section" id="skills">
-                <h2>Skills</h2>
-                <div class="skills-container">
-                    <!-- Languages -->
-                    <h3 class="skill-category">Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">Python</div>
-                        <div class="skill-item">C++</div>
-                        <div class="skill-item">C</div>
-                        <div class="skill-item">C#</div>
-                        <div class="skill-item">Java</div>
-                        <div class="skill-item">JavaScript</div>
-                        <div class="skill-item">TypeScript</div>
-                        <div class="skill-item">SQL</div>
-                        <div class="skill-item">GDScript</div>
-                        <div class="skill-item">Solidity</div>
-                        <div class="skill-item">Assembly</div>
-                        <div class="skill-item">MATLAB</div>
-                        <div class="skill-item">HTML/CSS</div>
-                    </div>
-
-                    <!-- ML & AI -->
-                    <h3 class="skill-category">ML &amp; AI</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">PyTorch</div>
-                        <div class="skill-item">TensorFlow</div>
-                        <div class="skill-item">scikit-learn</div>
-                        <div class="skill-item">NumPy</div>
-                        <div class="skill-item">pandas</div>
-                        <div class="skill-item">Hugging Face</div>
-                        <div class="skill-item">OpenCV</div>
-                        <div class="skill-item">MediaPipe</div>
-                        <div class="skill-item">FAISS</div>
-                        <div class="skill-item">sentence-transformers</div>
-                        <div class="skill-item">pgvector</div>
-                        <div class="skill-item">LangChain</div>
-                        <div class="skill-item">Letta</div>
-                        <div class="skill-item">OpenAI API</div>
-                        <div class="skill-item">MCP</div>
-                    </div>
-
-                    <!-- Frameworks -->
-                    <h3 class="skill-category">Frameworks</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">React</div>
-                        <div class="skill-item">Next.js</div>
-                        <div class="skill-item">Tailwind</div>
-                        <div class="skill-item">Vite</div>
-                        <div class="skill-item">Node.js</div>
-                        <div class="skill-item">Express</div>
-                        <div class="skill-item">Flask</div>
-                        <div class="skill-item">FastAPI</div>
-                        <div class="skill-item">Jinja</div>
-                        <div class="skill-item">Eleventy</div>
-                        <div class="skill-item">ROS</div>
-                        <div class="skill-item">OpenGL</div>
-                        <div class="skill-item">Hardhat</div>
-                        <div class="skill-item">Godot</div>
-                    </div>
-
-                    <!-- Databases -->
-                    <h3 class="skill-category">Databases</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">PostgreSQL</div>
-                        <div class="skill-item">SQLite</div>
-                    </div>
-
-                    <!-- Tools -->
-                    <h3 class="skill-category">Tools</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">Docker</div>
-                        <div class="skill-item">Docker Compose</div>
-                        <div class="skill-item">Git/GitHub</div>
-                        <div class="skill-item">GitHub Actions (CI/CD)</div>
-                        <div class="skill-item">Linux</div>
-                        <div class="skill-item">HPC (Slurm)</div>
-                        <div class="skill-item">Auth0</div>
-                        <div class="skill-item">Chrome Extensions API</div>
-                        <div class="skill-item">Jupyter Notebook</div>
-                        <div class="skill-item">Autodesk Inventor</div>
-                        <div class="skill-item">Claude Code</div>
-                        <div class="skill-item">Cursor</div>
-                        <div class="skill-item">GitHub Copilot</div>
-                    </div>
-
-                    <!-- Spoken Languages -->
-                    <h3 class="skill-category">Spoken Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">English</div>
-                        <div class="skill-item">Hindi</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section" id="extracurriculars">
-                <h2>Extracurriculars</h2>
-                <div class="extracurriculars-container">
-                    <div class="extracurricular-box">
-                        <h3>Farm Robotics Challenge</h3>
-                        <p class="extra-meta">Software (Sensors &amp; Computer Vision) &middot; Aug 2024 - May 2025</p>
-                        <p>Developed C++ sensor integration and computer vision software for an autonomous drone built to improve pesticide and herbicide distribution on farms.</p>
-                    </div>
-                    <div class="extracurricular-box">
-                        <h3>Battery Workforce Challenge</h3>
-                        <p class="extra-meta">Hardware &amp; Software &middot; Aug 2024 - May 2025</p>
-                        <p>Contributed to the structural design and build of an electric vehicle battery pack while planning the pack's software in MATLAB.</p>
-                    </div>
-                    <div class="extracurricular-box">
-                        <h3>AIAA Design/Build/Fly</h3>
-                        <p class="extra-meta">Hardware &amp; Aerodynamics &middot; Aug 2023 - Jan 2025</p>
-                        <p>Built and refined wing structures for a competition aircraft on a 10-person team, performed the aerodynamics calculations behind the wing design, and contributed to the aircraft's supporting code.</p>
-                    </div>
-                    <div class="extracurricular-box">
-                        <h3>Theta Tau</h3>
-                        <p class="extra-meta">Professional Engineering Fraternity &middot; Aug 2024 - May 2025</p>
-                        <p>Served as Scholarship Chair (Jan - May 2025) and previously as Community Service &amp; Brotherhood Chair (Aug 2024 - Jan 2025).</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section" id="projects">
-                <h2>Projects</h2>
-                <div class="projects-container">
-                    <a href="https://github.com/parthgmjain/Pipeline" target="_blank" class="project-box">
-                        <div class="project-top">
-                            <span class="project-tag">MCP &middot; AI Agents</span>
-                            <span class="project-time">48 hrs</span>
-                        </div>
-                        <h3>Offerlog</h3>
-                        <div class="line"></div>
-                        <p>An MCP server that lets AI agents log, update, and track job applications through scoped tools with deny-by-default permissions &mdash; agents can add and update, but never delete or send anything. Every tool call lands in an append-only audit log, and a Next.js dashboard with Auth0 login and MFA handles review and deletions.</p>
-                        <p class="project-stack">TypeScript &middot; MCP SDK &middot; PostgreSQL &middot; Next.js &middot; Tailwind &middot; Auth0</p>
-                    </a>
-
-                    <a href="https://github.com/parthgmjain/LeaseLens" target="_blank" class="project-box">
-                        <div class="project-top">
-                            <span class="project-tag">RAG &middot; Legal Tech</span>
-                            <span class="project-time">48 hrs</span>
-                        </div>
-                        <h3>LeaseLens</h3>
-                        <div class="line"></div>
-                        <p>A RAG assistant that answers California tenant-rights questions for college students in plain English, citing the exact Civil Code section behind every answer and refusing when its sources don't cover the question. An evaluation harness measures recall@5, citation accuracy, and refusal correctness in CI on every push.</p>
-                        <p class="project-stack">Python &middot; FastAPI &middot; PostgreSQL (pgvector) &middot; OpenAI API &middot; Next.js &middot; TypeScript</p>
-                    </a>
-
-                    <a href="https://github.com/parthgmjain/TechLabs" target="_blank" class="project-box">
-                        <div class="project-top">
-                            <span class="project-tag">Full-Stack &middot; ML</span>
-                            <span class="project-time">150 hrs</span>
-                        </div>
-                        <h3>TechLabs</h3>
-                        <div class="line"></div>
-                        <p>Led a team of 5 building a full-stack admissions guidance platform covering 500+ universities and 2,000+ programs. Owned the AI/ML pipeline &mdash; a hybrid KNN and context-based recommender that improved precision@5 by 30% over a KNN-only baseline &mdash; plus an automated scraper and AI enrichment pipeline, all containerized with Docker Compose.</p>
-                        <p class="project-stack">FastAPI &middot; React &middot; Vite &middot; PostgreSQL &middot; scikit-learn &middot; pandas &middot; Docker</p>
-                    </a>
-
-                    <a href="https://github.com/parthgmjain/PoseVision" target="_blank" class="project-box">
-                        <div class="project-top">
-                            <span class="project-tag">Computer Vision</span>
-                            <span class="project-time">48 hrs</span>
-                        </div>
-                        <h3>PoseVision</h3>
-                        <span class="project-award"><i class="fas fa-trophy"></i> 1st Place, SASE Hacks</span>
-                        <div class="line"></div>
-                        <p>Analyzes squat videos to detect 10 common form flaws at 30 FPS, extracting 33 body landmarks and joint angles with MediaPipe and OpenCV. Reached 90% flaw-detection accuracy on a team-built dataset of 70+ labeled videos and turns the data into personalized corrective feedback.</p>
-                        <p class="project-stack">Python &middot; MediaPipe &middot; OpenCV &middot; NumPy</p>
-                    </a>
-
-                    <a href="https://github.com/parthgmjain/Castlelot" target="_blank" class="project-box">
-                        <div class="project-top">
-                            <span class="project-tag">Game Dev</span>
-                            <span class="project-time">175 hrs</span>
-                        </div>
-                        <h3>Castlelot</h3>
-                        <div class="line"></div>
-                        <p>A solo-developed chess roguelike with a gambling economy: 49 playable pieces (43 custom), 17 run modifiers, and 4 difficulty tiers with procedural zone and boss generation. 6.9k lines of game logic are backed by 9.6k lines of tests at 75% coverage, with a greedy-search AI opponent and minimax and MCTS opponents in development.</p>
-                        <p class="project-stack">Godot &middot; GDScript</p>
-                    </a>
-
-                    <a href="https://github.com/parthgmjain/PantryPanther" target="_blank" class="project-box">
-                        <div class="project-top">
-                            <span class="project-tag">Web App</span>
-                            <span class="project-time">24 hrs</span>
-                        </div>
-                        <h3>Pantry Panther</h3>
-                        <div class="line"></div>
-                        <p>A hackathon app that recommends recipes from a 15k-recipe dataset based on the ingredients you already have, ranking matches across 1,000+ unique ingredients in under 100 ms, with keyword search, cook-time and rating filters, and a saved-recipes list.</p>
-                        <p class="project-stack">React &middot; Vite &middot; JavaScript &middot; PapaParse</p>
-                    </a>
-
-                    <a href="https://github.com/parthgmjain/Clean-Tube" target="_blank" class="project-box">
-                        <div class="project-top">
-                            <span class="project-tag">Chrome Extension</span>
-                            <span class="project-time">24 hrs</span>
-                        </div>
-                        <h3>CleanTube</h3>
-                        <div class="line"></div>
-                        <p>A Manifest V3 extension that lets you fully customize YouTube &mdash; keyword filtering on titles and channels plus 20 toggles for Shorts, comments, end cards, and autoplay. A MutationObserver reapplies filters across 7 page regions as content loads, with settings synced via chrome.storage.</p>
-                        <p class="project-stack">JavaScript &middot; Chrome Extensions API (MV3) &middot; HTML/CSS</p>
-                    </a>
-
-                    <a href="https://github.com/parthgmjain/Recall-Royale" target="_blank" class="project-box">
-                        <div class="project-top">
-                            <span class="project-tag">Flask App</span>
-                            <span class="project-time">24 hrs</span>
-                        </div>
-                        <h3>Recall Royale</h3>
-                        <div class="line"></div>
-                        <p>Led a team of 3 at Open Source Hackfest to build a gamified flashcard app. A 3-step deck builder sorts cards into easy, medium, and hard tiers and creates a dedicated SQLite table per subject, and a card-flip play mode adds scoring, a timer, and typed-answer checking.</p>
-                        <p class="project-stack">Python &middot; Flask &middot; SQLite &middot; JavaScript &middot; Jinja</p>
-                    </a>
-
-                    <a href="https://github.com/parthgmjain/CreditCompass" target="_blank" class="project-box">
-                        <div class="project-top">
-                            <span class="project-tag">AI &middot; FinTech</span>
-                            <span class="project-time">24 hrs</span>
-                        </div>
-                        <h3>Credit Compass</h3>
-                        <span class="project-award"><i class="fas fa-trophy"></i> Alumni Choice Award, HackMerced</span>
-                        <div class="line"></div>
-                        <p>Personalized credit-building advice through a conversational interface powered by Letta and the OpenAI API, with a card recommendation engine over 15+ credit products and a dynamic 12-month credit timeline. Letta's memory keeps context across sessions, cutting repeated user input by 40%.</p>
-                        <p class="project-stack">Python &middot; Flask &middot; Letta &middot; OpenAI API</p>
-                    </a>
-
-                    <a href="https://github.com/parthgmjain/Carbon-DEX" target="_blank" class="project-box">
-                        <div class="project-top">
-                            <span class="project-tag">Blockchain</span>
-                            <span class="project-time">48 hrs</span>
-                        </div>
-                        <h3>Carbex</h3>
-                        <div class="line"></div>
-                        <p>A blockchain carbon-credit trading platform built at ETH Prague. Six Solidity contracts tokenize credits as ERC-1155 assets for trustless peer-to-peer trading at about 60k gas per transfer on Sepolia, with on-chain retirement tracking to prevent double-counting and fraud.</p>
-                        <p class="project-stack">Solidity &middot; Hardhat &middot; Ethereum</p>
-                    </a>
-
-                    <a href="https://github.com/parthgmjain/personal_website" target="_blank" class="project-box">
-                        <div class="project-top">
-                            <span class="project-tag">Web</span>
-                        </div>
-                        <h3>Personal Website</h3>
-                        <div class="line"></div>
-                        <p>This site &mdash; a responsive personal portfolio built from scratch and iterated on over time.</p>
-                        <p class="project-stack">HTML &middot; CSS &middot; JavaScript</p>
-                    </a>
-
-                    <a href="https://github.com/parthgmjain/Blackjack" target="_blank" class="project-box">
-                        <div class="project-top">
-                            <span class="project-tag">C++</span>
-                        </div>
-                        <h3>Blackjack</h3>
-                        <div class="line"></div>
-                        <p>A command-line Blackjack game written in C++.</p>
-                        <p class="project-stack">C++</p>
-                    </a>
-                </div>
-            </div>
-        </div>
+        </footer>
 
         <script>
-            function scrollToNextSection() {
-                // Get the current hero section
-                const heroSection = document.querySelector('.hero-section');
+            (function () {
+                var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-                // Get the next sibling section
-                const nextSection = heroSection.nextElementSibling;
-
-                // Scroll to the next section with smooth behavior
-                if (nextSection) {
-                    nextSection.scrollIntoView({ behavior: 'smooth' });
+                // Entrance: each .reveal rises in once as it enters the viewport.
+                var reveals = document.querySelectorAll('.reveal');
+                if ('IntersectionObserver' in window && !reduce) {
+                    var io = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (e) {
+                            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+                        });
+                    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+                    reveals.forEach(function (el) { io.observe(el); });
+                } else {
+                    reveals.forEach(function (el) { el.classList.add('in'); });
                 }
-            }
 
-            // Function to check if an element is in the viewport
-            function isInViewport(element) {
-                const rect = element.getBoundingClientRect();
-                return (
-                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9 &&
-                    rect.bottom >= 0
-                );
-            }
+                // Nav: mark the section currently in view.
+                var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+                var targets = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+                function spy() {
+                    var current = -1;
+                    targets.forEach(function (t, i) { if (t && t.getBoundingClientRect().top <= 140) current = i; });
+                    links.forEach(function (a, i) {
+                        if (i === current) { a.setAttribute('aria-current', 'true'); } else { a.removeAttribute('aria-current'); }
+                    });
+                }
+                window.addEventListener('scroll', spy, { passive: true });
+                spy();
 
-            // Function to handle scroll events
-            function handleScroll() {
-                const animatedItems = document.querySelectorAll(
-                    '.skill-item, .timeline-item, .extracurricular-box, .project-box'
-                );
-                animatedItems.forEach((item) => {
-                    if (isInViewport(item)) {
-                        item.classList.add('in-view');
+                // Projects: names are the index; the preview card follows the active name.
+                var work = document.querySelector('.work');
+                var rows = Array.prototype.slice.call(work.querySelectorAll('.names li'));
+                var previewBody = work.querySelector('.preview-body');
+                var previewFile = work.querySelector('.preview-file');
+                var desktop = window.matchMedia('(min-width: 900px)');
+                var active = null;
+
+                function show(li) {
+                    rows.forEach(function (r) { r.classList.toggle('is-active', r === li); });
+                    active = li;
+                    var detail = li.querySelector('.detail');
+                    if (desktop.matches) {
+                        var swap = function () {
+                            previewBody.innerHTML = detail.innerHTML;
+                            previewFile.textContent = li.getAttribute('data-file');
+                            previewBody.classList.remove('is-swapping');
+                        };
+                        if (reduce) { swap(); } else {
+                            previewBody.classList.add('is-swapping');
+                            window.setTimeout(swap, 120);
+                        }
                     }
+                }
+
+                rows.forEach(function (li) {
+                    var btn = li.querySelector('.name');
+                    btn.addEventListener('mouseenter', function () { if (desktop.matches) { show(li); } });
+                    btn.addEventListener('focus', function () { if (desktop.matches) { show(li); } });
+                    btn.addEventListener('click', function () {
+                        if (desktop.matches) { show(li); return; }
+                        var open = li.classList.toggle('is-open');
+                        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                    });
                 });
-            }
 
-            // Add scroll event listener
-            window.addEventListener('scroll', handleScroll);
-
-            // Trigger the check on page load
-            handleScroll();
-
-            // Highlight the nav link for the section currently in view
-            const navLinks = document.querySelectorAll('.nav-links a');
-            const sections = Array.from(navLinks)
-                .map((link) => document.querySelector(link.getAttribute('href')))
-                .filter(Boolean);
-
-            function handleNavHighlight() {
-                let current = sections[0];
-                sections.forEach((section) => {
-                    if (section.getBoundingClientRect().top <= 120) {
-                        current = section;
-                    }
+                // Filters
+                var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+                chips.forEach(function (chip) {
+                    chip.addEventListener('click', function () {
+                        var f = chip.getAttribute('data-filter');
+                        chips.forEach(function (c) {
+                            var on = c === chip;
+                            c.classList.toggle('is-on', on);
+                            c.setAttribute('aria-pressed', on ? 'true' : 'false');
+                        });
+                        rows.forEach(function (li) {
+                            var match = f === 'all' || li.getAttribute('data-cat').split(' ').indexOf(f) !== -1;
+                            li.hidden = !match;
+                        });
+                        work.querySelector('.names-more').hidden = !rows.some(function (li) {
+                            return !li.hidden && li.parentNode.classList.contains('names-more');
+                        });
+                        work.querySelector('.more-title').hidden = work.querySelector('.names-more').hidden;
+                        work.querySelector('.names-big').hidden = !rows.some(function (li) {
+                            return !li.hidden && li.parentNode.classList.contains('names-big');
+                        });
+                        var first = rows.filter(function (li) { return !li.hidden; })[0];
+                        if (first) { show(first); }
+                    });
                 });
-                navLinks.forEach((link) => {
-                    link.classList.toggle('active', link.getAttribute('href') === `#${current.id}`);
-                });
-            }
 
-            window.addEventListener('scroll', handleNavHighlight);
-            handleNavHighlight();
+                show(rows[0]);
+                desktop.addEventListener('change', function () { show(active || rows[0]); });
+            })();
         </script>
     </body>
 </html>
